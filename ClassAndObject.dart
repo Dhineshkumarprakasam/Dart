@@ -1,19 +1,23 @@
 class A
 {
-  int? a;
-  A(int val)
-  {
-     this.a = val;
-  }
+  int? number;
+  A(this.number);
   
-  void display()
+  void compare(A obj)
   {
-    print("The value of a : ${a}");
+    if(this.number! > obj.number!)
+      print("${number} is greater than ${obj.number}");
+    
+    else
+       print("${obj.number} is greater than ${number}");
   }
 }
 
 void main()
 {
-  A obj = new A(100);
-  obj.display();
+  
+  A obj1 = new A(10);
+  A obj2 = new A(20);
+  
+  obj1.compare(obj2);
 }
