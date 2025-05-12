@@ -1,11 +1,11 @@
 class A
 {
-  int? number;
+  int number = 0;
   A(this.number);
   
   void compare(A obj)
   {
-    if(this.number! > obj.number!)
+    if(this.number > obj.number)
       print("${number} is greater than ${obj.number}");
     
     else
@@ -16,8 +16,8 @@ class A
 void main()
 {
   
-  A obj1 = new A(10);
-  A obj2 = new A(20);
+  A obj1 = new A(100);
+  A obj2 = new A(200);
   
   obj1.compare(obj2);
 }
